@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 02</title>
+    <script>
+        function mostrarFrutas() {
+            let frutas = ["Maçã", "Banana", "Laranja", "Abacaxi", "Uva"];
+            let lista = "<ol>";
+            for (let i = 0; i < frutas.length; i++) {
+                lista += "<li>" + frutas[i] + "</li>";
+            }
+            lista += "</ol>";
+            document.getElementById("frutas").innerHTML = lista;
+        }
+    </script>
+</head>
+<body>
+    <button onclick="mostrarFrutas()">Exibir Frutas</button>
+    <div id="frutas"></div>
+</body>
+</html>

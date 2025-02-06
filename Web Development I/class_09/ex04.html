@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 04</title>
+    <script>
+        class Pessoa {
+            constructor(nome, idade) {
+                this.nome = nome;
+                this.idade = idade;
+            }
+
+            saudacao() {
+                return `Olá, meu nome é ${this.nome}`;
+            }
+        }
+
+        function criarPessoa() {
+            let nome = document.getElementById("nome").value;
+            let idade = document.getElementById("idade").value;
+            let pessoa = new Pessoa(nome, idade);
+
+            document.getElementById("infoPessoa").innerHTML = `Nome: ${pessoa.nome}, Idade: ${pessoa.idade}`;
+            document.getElementById("saudacao").onclick = function() {
+                document.getElementById("mensagem").innerHTML = pessoa.saudacao();
+            };
+        }
+    </script>
+</head>
+<body>
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome">
+    <label for="idade">Idade:</label>
+    <input type="number" id="idade">
+    <button onclick="criarPessoa()">Criar Pessoa</button>
+    <p id="infoPessoa"></p>
+    <button id="saudacao">Exibir Saudação</button>
+    <p id="mensagem"></p>
+</body>
+</html>

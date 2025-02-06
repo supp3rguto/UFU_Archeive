@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 03</title>
+    <script>
+        let carro = {
+            marca: "Toyota",
+            modelo: "Corolla",
+            ano: 2020,
+            descricao: function() {
+                return `Este carro é um ${this.marca} ${this.modelo} de ${this.ano}`;
+            }
+        };
+
+        function mostrarCarro() {
+            let detalhes = `Marca: ${carro.marca}<br>Modelo: ${carro.modelo}<br>Ano: ${carro.ano}`;
+            document.getElementById("carro").innerHTML = detalhes;
+        }
+
+        function exibirDescricao() {
+            document.getElementById("descricao").innerHTML = carro.descricao();
+        }
+    </script>
+</head>
+<body>
+    <button onclick="mostrarCarro()">Exibir Carro</button>
+    <button onclick="exibirDescricao()">Exibir Descrição</button>
+    <div id="carro"></div>
+    <p id="descricao"></p>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Exercício 2</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    .box { width: 200px; height: 100px; border: 1px solid black; }
+  </style>
+</head>
+<body>
+
+<div class="box">Caixa de texto</div>
+
+<script>
+  $(document).ready(function() {
+    $(".box").mousedown(function() {
+      $(this).css("background-color", "blue");
+    });
+  });
+</script>
+
+</body>
+</html>

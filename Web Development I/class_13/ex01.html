@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 1</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <button id="meuBotao">Clique em mim!</button>
+
+    <script>
+        $(document).ready(function(){
+            $("#meuBotao").click(function(){
+                $(this).text("Você clicou aqui!");
+            });
+        });
+    </script>
+</body>
+</html>

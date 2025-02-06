@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 01</title>
+    <script>
+        function mostrarNumeros() {
+            let lista = "<ul>";
+            for (let i = 1; i <= 10; i++) {
+                lista += "<li>" + i + "</li>";
+            }
+            lista += "</ul>";
+            document.getElementById("numeros").innerHTML = lista;
+        }
+    </script>
+</head>
+<body>
+    <button onclick="mostrarNumeros()">Exibir Números</button>
+    <div id="numeros"></div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Exercício 5</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    .container { width: 300px; height: 150px; border: 1px solid black; }
+    button { margin: 10px; }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <button>Botão</button>
+</div>
+
+<script>
+  $(document).ready(function() {
+    $(".container").mouseleave(function() {
+      $(this).css("background-color", "red");
+    });
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 2</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="minhaDiv">Div 1</div>
+    <div class="minhaDiv" id="divEspecifica">Div 2 (com ID)</div>
+    <div class="minhaDiv">Div 3</div>
+
+    <script>
+        $(document).ready(function(){
+            $("#divEspecifica").css("background-color", "lightblue");
+        });
+    </script>
+</body>
+</html>

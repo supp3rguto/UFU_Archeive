@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Exercício 1</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    p { padding: 10px; }
+  </style>
+</head>
+<body>
+
+<p id="p1">Parágrafo 1</p>
+<p id="p2">Parágrafo 2</p>
+<p id="p3">Parágrafo 3</p>
+
+<script>
+  $(document).ready(function() {
+    $("#p1").dblclick(function() {
+      $(this).css("background-color", "purple");
+    });
+    
+    $("#p2").dblclick(function() {
+      $(this).css("background-color", "lightblue");
+    });
+    
+    $("#p3").dblclick(function() {
+      $(this).css("background-color", "magenta");
+    });
+  });
+</script>
+
+</body>
+</html>
