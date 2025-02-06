@@ -1,0 +1,46 @@
+/* Estilos da Galeria Animada */
+
+/* Ajuste na largura e altura das caixas dos membros */
+.card {
+    width: 400px; /* Defina a largura desejada */
+    height: 400px; /* Defina a altura desejada */
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px; /* Adicione bordas arredondadas, se desejar */
+    margin-bottom: 20px;
+}
+
+/* Ajuste para a imagem dentro da caixa */
+.card-img {
+    width: 100%; /* A imagem ocupará 100% da largura do card */
+    height: 100%; /* A imagem ocupará 100% da altura do card */
+    object-fit: cover; /* Mantém a proporção da imagem sem distorção */
+    transition: all 400ms;
+}
+
+
+.card-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    transition: opacity 300ms;
+}
+
+.card:hover .card-img {
+    transform: scale(1.1);
+    filter: grayscale(100%);
+}
+
+.card:hover .card-text {
+    opacity: 1;
+}
+
