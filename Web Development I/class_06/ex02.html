@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 02</title>
+</head>
+<body>
+    <ul id="lista">
+        <li>Item 1</li>
+        <li>Item 2</li>
+    </ul>
+    <button onclick="adicionarItem()">Adicionar Item</button>
+
+    <script>
+        function adicionarItem() {
+            var lista = document.getElementById("lista");
+            var novoItem = document.createElement("li");
+            novoItem.textContent = "Novo Item";
+            lista.appendChild(novoItem);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+.div1 {
+    background-color: orange;
+    border: 30px solid green;
+    height: 200px;
+    width: 500px;
+    margin: 2px;
+}
+
+.div2 {
+    background-color: purple;
+    border-top: 30px solid yellow;
+    border-bottom: 30px solid yellow;
+    border-left: 30px solid brown;
+    border-right: 30px solid brown;
+    height: 200px;
+    width: 500px;
+    margin: 2px;
+}

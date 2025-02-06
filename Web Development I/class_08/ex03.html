@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 03</title>
+</head>
+<body>
+    <h2>Verifique Idade e Altura</h2>
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome"><br><br>
+
+    <label for="idade">Idade:</label>
+    <input type="number" id="idade"><br><br>
+
+    <label for="altura">Altura (m):</label>
+    <input type="number" id="altura" step="0.01"><br><br>
+
+    <button onclick="verificar()">Verificar</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        function verificar() {
+            var nome = document.getElementById("nome").value;
+            var idade = parseInt(document.getElementById("idade").value);
+            var altura = parseFloat(document.getElementById("altura").value);
+
+            if (idade >= 18 && idade <= 35 && altura > 1.86) {
+                document.getElementById("resultado").innerText = "Nome: " + nome;
+            } else {
+                document.getElementById("resultado").innerText = "Idade: " + idade + ", Altura: " + altura;
+            }
+        }
+    </script>
+</body>
+</html>

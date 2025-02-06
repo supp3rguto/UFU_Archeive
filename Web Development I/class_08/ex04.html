@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 04</title>
+</head>
+<body>
+    <h2>Entre com 10 Temperaturas</h2>
+
+    <div id="inputs">
+    </div>
+
+    <button onclick="calcular()">Calcular</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        for (let i = 0; i < 10; i++) {
+            var input = document.createElement("input");
+            input.type = "number";
+            input.id = "temp" + i;
+            input.placeholder = "Temperatura " + (i + 1);
+            document.getElementById("inputs").appendChild(input);
+            document.getElementById("inputs").appendChild(document.createElement("br"));
+        }
+
+        function calcular() {
+            var temperaturas = [];
+
+            for (let i = 0; i < 10; i++) {
+                temperaturas.push(parseFloat(document.getElementById("temp" + i).value));
+            }
+
+            var menor = Math.min(...temperaturas);
+            var maior = Math.max(...temperaturas);
+            var media = temperaturas.reduce((a, b) => a + b, 0) / temperaturas.length;
+
+            document.getElementById("resultado").innerHTML = `
+                <p>Menor Temperatura: ${menor}°C</p>
+                <p>Maior Temperatura: ${maior}°C</p>
+                <p>Média das Temperaturas: ${media.toFixed(2)}°C</p>
+            `;
+        }
+    </script>
+</body>
+</html>

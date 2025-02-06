@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 03</title>
+    <style>
+        .paragrafo {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <p class="paragrafo">Parágrafo 1</p>
+    <p class="paragrafo">Parágrafo 2</p>
+    <p class="paragrafo">Parágrafo 3</p>
+    <button onclick="ocultarParagrafos()">Ocultar Parágrafos</button>
+    <button onclick="exibirParagrafos()">Exibir Parágrafos</button>
+
+    <script>
+        function ocultarParagrafos() {
+            var paragrafos = document.querySelectorAll(".paragrafo");
+            paragrafos.forEach(function(paragrafo) {
+                paragrafo.style.display = "none";
+            });
+        }
+
+        function exibirParagrafos() {
+            var paragrafos = document.querySelectorAll(".paragrafo");
+            paragrafos.forEach(function(paragrafo) {
+                paragrafo.style.display = "block";
+            });
+        }
+    </script>
+</body>
+</html>

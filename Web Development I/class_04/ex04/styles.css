@@ -1,0 +1,23 @@
+.p1 p {
+    background-color: #4a0058;
+    padding: 10px;
+    font-size: small;
+    color: rgb(122, 92, 255);
+    font-family: Arial, sans-serif;
+}
+
+.p2 p {
+    background-color: #e5ff00;
+    padding: 20px;
+    font-size: medium;
+    color: rgb(0, 0, 0);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.p3 p {
+    background-color: #680000;
+    padding: 30px;
+    font-size: larger;
+    color: rgb(255, 165, 165);
+    font-family: 'Courier New', Courier, monospace;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 05</title>
+</head>
+<body>
+    <h2>Entre com um número de valores</h2>
+    <input type="number" id="valor" placeholder="Digite um valor"><br><br>
+    <button onclick="adicionarValor()">Adicionar Valor</button>
+    <button onclick="calcular()">Calcular</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        var valores = [];
+
+        function adicionarValor() {
+            var valor = parseFloat(document.getElementById("valor").value);
+            valores.push(valor);
+            document.getElementById("valor").value = "";
+        }
+
+        function calcular() {
+            var positivos = valores.filter(v => v >= 0);
+            var negativos = valores.filter(v => v < 0);
+
+            var media = valores.reduce((a, b) => a + b, 0) / valores.length;
+            var qtdPositivos = positivos.length;
+            var qtdNegativos = negativos.length;
+
+            var percPositivos = (qtdPositivos / valores.length) * 100;
+            var percNegativos = (qtdNegativos / valores.length) * 100;
+
+            document.getElementById("resultado").innerHTML = `
+                <p>Média: ${media.toFixed(2)}</p>
+                <p>Quantidade de positivos: ${qtdPositivos}</p>
+                <p>Quantidade de negativos: ${qtdNegativos}</p>
+                <p>Percentual de positivos: ${percPositivos.toFixed(2)}%</p>
+                <p>Percentual de negativos: ${percNegativos.toFixed(2)}%</p>
+            `;
+        }
+    </script>
+</body>
+</html>

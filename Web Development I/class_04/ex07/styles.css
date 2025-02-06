@@ -1,0 +1,4 @@
+.paragrafo p {
+    text-decoration: underline line-through overline;
+    text-indent: 50px;
+}

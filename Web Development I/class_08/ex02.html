@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 02</title>
+</head>
+<body>
+    <h2>Calcule a média de pesos por faixa etária</h2>
+    <label for="idade">Idade:</label>
+    <input type="number" id="idade"><br><br>
+
+    <label for="peso">Peso (kg):</label>
+    <input type="number" id="peso" step="0.01"><br><br>
+
+    <button onclick="adicionarPessoa()">Adicionar Pessoa</button>
+    <button onclick="calcularMedia()">Calcular Média</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        var pessoas = [];
+
+        function adicionarPessoa() {
+            var idade = parseInt(document.getElementById("idade").value);
+            var peso = parseFloat(document.getElementById("peso").value);
+            pessoas.push({ idade: idade, peso: peso });
+            document.getElementById("idade").value = "";
+            document.getElementById("peso").value = "";
+        }
+
+        function calcularMedia() {
+            var faixa1_10 = [], faixa11_20 = [], faixa21_30 = [], faixa30 = [];
+
+            pessoas.forEach(pessoa => {
+                if (pessoa.idade >= 1 && pessoa.idade <= 10) {
+                    faixa1_10.push(pessoa.peso);
+                } else if (pessoa.idade >= 11 && pessoa.idade <= 20) {
+                    faixa11_20.push(pessoa.peso);
+                } else if (pessoa.idade >= 21 && pessoa.idade <= 30) {
+                    faixa21_30.push(pessoa.peso);
+                } else if (pessoa.idade > 30) {
+                    faixa30.push(pessoa.peso);
+                }
+            });
+
+            var media1_10 = (faixa1_10.reduce((a, b) => a + b, 0) / faixa1_10.length) || 0;
+            var media11_20 = (faixa11_20.reduce((a, b) => a + b, 0) / faixa11_20.length) || 0;
+            var media21_30 = (faixa21_30.reduce((a, b) => a + b, 0) / faixa21_30.length) || 0;
+            var media30 = (faixa30.reduce((a, b) => a + b, 0) / faixa30.length) || 0;
+
+            document.getElementById("resultado").innerHTML = `
+                <p>Média peso (1-10 anos): ${media1_10.toFixed(2)} kg</p>
+                <p>Média peso (11-20 anos): ${media11_20.toFixed(2)} kg</p>
+                <p>Média peso (21-30 anos): ${media21_30.toFixed(2)} kg</p>
+                <p>Média peso (31+ anos): ${media30.toFixed(2)} kg</p>
+            `;
+        }
+    </script>
+</body>
+</html>

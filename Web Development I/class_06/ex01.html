@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 01</title>
+    <style>
+        #texto {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <p id="texto">Texto Original</p>
+    <button onclick="alterarParaAlterado()">Texto Alterado</button>
+    <button onclick="alterarParaOriginal()">Texto Original</button>
+
+    <script>
+        function alterarParaAlterado() {
+            var paragrafo = document.getElementById("texto");
+            paragrafo.innerHTML = "Texto Alterado";
+            paragrafo.style.color = "red";
+        }
+
+        function alterarParaOriginal() {
+            var paragrafo = document.getElementById("texto");
+            paragrafo.innerHTML = "Texto Original";
+            paragrafo.style.color = "blue";
+        }
+    </script>
+</body>
+</html>
